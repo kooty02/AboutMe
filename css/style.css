@@ -1,73 +1,114 @@
 body {
     font-family: 'PT Sans', sans-serif;
-}
-h1 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-h2 {
-    margin-bottom: 15px;
-    margin-top: 15px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Category Grid CSS */
+  
+  #categoryGrid {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "bookcases bookcases desks desks"
+    "bookcases bookcases bedroom patio"
+    "bookcases bookcases bedroom couches";
+  }
+  
+  #bookcases {
+    grid-area: bookcases;
+    background-image: url("../images/aboutme.jpg");
+  
+  }
+  #bedroom {
+    grid-area: bedroom;
+  }
+  
+  #couches {
+    grid-area: couches;}
+  
+  #patio {
+    grid-area: patio;
+  }
+  
+  
+  .categoryGridArea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    display: grid;
+  
+  }
+  
+  .heading { 
+    border-bottom: 3px solid black;
+  }
+  
+  
+  /* Navigation CSS */
+  
+  #navBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+  }
+  #navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  /* Typography CSS */
+  
+  h2 {
+    font-size: 60px;
+    margin: 0px 0px;
+    color: #FF6200;
+  }
+  
+  h3 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0px 0px;
+  }
+  
+  h4 {
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+  }
+  
+  
+  #headline p {
+    max-width: 350px;
     font-size: 16px;
-    text-align: center;
-    font-weight: bold;
-}
-p {
-    margin-bottom: 10px;
-    font-size: 13px;
-    line-height: 25px;
-
-}
-strong {
-    font-weight: bold;
-}
-ul li {
-    margin-bottom: 12px;
-}
-nav {
-    position: relative;
-    width: 100%;
-    background-color: #ccc;
-}
-.nav-item {
-    display: inline-block;
-    background-color: #ccc;
-    border-right: 2px solid black;
-    padding: 20px 20px 20px 20px;
-}
-
-aside {
-    float: left;
-    width: 25%;
-    height: 100%;
-    padding: 20px 20px 20px 20px;
-    margin-top: 50px;
-    background-color: red;
-}
-img#sidebar-flag {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-
-}
-
-main {
-    position: relative;
-    float: right;
-    width: 70%;
-    height: 100%;
-    margin-top: 50px;
-    padding-right: 20px;
-    background-color: lightseagreen;
-}
-section {
-    position: relative;
-    width: 100%;
-    margin-bottom: 50px;
-}
-img#main-section-flag {
-    float: left;
-    margin: 0px 20px 10px 0px;
-}
+    font-weight: 300;
+    margin: 0px 0px;
+    color: #636364;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    #navigation {
+      margin-left: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #headline {
+      position: static;
+      margin: 20px;
+    }
+    #categoryGrid {
+      grid-template-rows: 300px 300px 300px 300px 300px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "bookcases"
+        "bedroom"
+        "patio"
+        "couches"
+        "desks";
+    }
+  }
