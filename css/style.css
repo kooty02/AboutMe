@@ -40,7 +40,7 @@ body {
 
 #picture {
   grid-area: picture;
-  background-image: url("../images/aboutme.jpg");
+  background-image: url("../img/aboutme.jpg");
 }
 
 #name {
