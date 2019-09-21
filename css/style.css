@@ -1,114 +1,167 @@
 body {
-    font-family: 'PT Sans', sans-serif;
-    background-color: #f0f0f0;
-  }
-  
-  /* Category Grid CSS */
-  
-  #categoryGrid {
-    margin: 0px 5%;
-    display: grid;
-    grid-template-rows: 200px 200px 200px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "bookcases bookcases desks desks"
-    "bookcases bookcases bedroom patio"
-    "bookcases bookcases bedroom couches";
-  }
-  
-  #bookcases {
-    grid-area: bookcases;
-    background-image: url("../images/aboutme.jpg");
-  
-  }
-  #bedroom {
-    grid-area: bedroom;
-  }
-  
-  #couches {
-    grid-area: couches;}
-  
-  #patio {
-    grid-area: patio;
-  }
-  
-  
-  .categoryGridArea {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 5px;
-    display: grid;
-  
-  }
-  
-  .heading { 
-    border-bottom: 3px solid black;
-  }
-  
-  
-  /* Navigation CSS */
-  
-  #navBar {
-    display: flex;
-    justify-content: space-between;
-    margin: 5%;
-  }
+  font-family: 'PT Sans', sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Navigation CSS */
+#logo {
+  height: 30px;
+}
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5.5%;
+}
+#navigation {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+  margin: 12px;
+}
+
+/* Category Grid CSS */
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "picture name line line"
+  "picture quote words words"
+  "picture quote words words"
+  "picture quote words words";
+}
+
+#picture {
+  grid-area: picture;
+  background-image: url("../images/aboutme.jpg");
+}
+
+#name {
+  grid-area: name;
+}
+
+#quote {
+  grid-area: quote;
+}
+
+#words {
+  grid-area: words;
+}
+
+#line {
+  grid-area: line;
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 7px;
+  display: grid;
+  align-content: end;
+}
+
+.categoryGridArea2 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 7px;
+  display: grid;
+  align-content: top;
+}
+
+.categoryGridArea3 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 7px;
+  display: grid;
+  align-content: top;
+  border-bottom: 1px solid black;
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  align-items: right;
+  justify-content: flex-end;
+  margin: 5%;
+}
+
+#footer img {
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0px 2px;
+}
+
+#Linkedin {
+  height: 15px;
+}
+#Indeed {
+  height: 18px;
+}
+#Email {
+  height: 12px;
+}
+
+/* Hover */
+#navigation p:hover {
+  color: #111;
+}
+
+/* Typography CSS */
+p {
+  font-size: 14px;
+  color: #999999;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0px 0px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 40px;
+  margin: 0px 0px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 21px;
+  margin: 0px 0px;
+}
+
+/* Responsive Code */
+@media only screen and (max-width: 1000px) {
   #navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-left: auto;
   }
-  
-  
-  /* Typography CSS */
-  
-  h2 {
-    font-size: 60px;
-    margin: 0px 0px;
-    color: #FF6200;
+}
+
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: static;
+    margin: 20px;
   }
-  
-  h3 {
-    font-size: 32px;
-    font-weight: 300;
-    margin: 0px 0px;
+  #categoryGrid {
+    grid-template-rows: 300px 50px 10px 130px 240px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "picture"
+      "name"
+      "quote"
+      "line"
+      "words";
   }
-  
-  h4 {
-    color: white;
-    font-weight: 400;
-    font-size: 22px;
-  }
-  
-  
-  #headline p {
-    max-width: 350px;
-    font-size: 16px;
-    font-weight: 300;
-    margin: 0px 0px;
-    color: #636364;
-  }
-  
-  @media only screen and (max-width: 1000px) {
-    #navigation {
-      margin-left: auto;
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    #headline {
-      position: static;
-      margin: 20px;
-    }
-    #categoryGrid {
-      grid-template-rows: 300px 300px 300px 300px 300px;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "bookcases"
-        "bedroom"
-        "patio"
-        "couches"
-        "desks";
-    }
-  }
+}
