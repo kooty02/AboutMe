@@ -1,7 +1,15 @@
-body {
-  font-family: 'PT Sans', sans-serif;
-  background-color: #f0f0f0;
+#background {
+  width: 600px 400px;
+  background-color: #C9C5BB;
+  border: 10px red;
 }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #444444;
+}
+
+/* Background */
 
 /* Navigation CSS */
 #logo {
@@ -16,75 +24,169 @@ body {
 }
 #navigation {
   display: flex;
+  width: 60%;
+  align-items: flex-end;
   justify-content: space-evenly;
 }
 
-#navigation p {
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   cursor: pointer;
   text-decoration: none;
-  margin: 12px;
+  margin: 15px;
 }
+
 
 /* Category Grid CSS */
 #categoryGrid {
   margin: 0px 5%;
   display: grid;
-  grid-template-rows: 100px 100px 100px 100px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 400px 600px 400px;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "picture name line line"
-  "picture quote words words"
-  "picture quote words words"
-  "picture quote words words";
+  "picture role words"
+  "empty experience education"
+  "empty skills contact";
 }
 
 #picture {
   grid-area: picture;
-  background-image: url("../img/aboutme.jpg");
 }
 
-#name {
-  grid-area: name;
-}
-
-#quote {
-  grid-area: quote;
+#role {
+  grid-area: role;
 }
 
 #words {
   grid-area: words;
 }
 
-#line {
-  grid-area: line;
+#empty {
+  grid-area: empty;
+}
+
+#experience {
+  grid-area: experience;
+}
+
+#education {
+  grid-area: education;
 }
 
 .categoryGridArea {
-  background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  margin: 7px;
+  margin: 0px;
   display: grid;
-  align-content: end;
+  align-content: top;
 }
 
 .categoryGridArea2 {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 7px;
+  margin: 0px;
   display: grid;
   align-content: top;
 }
 
 .categoryGridArea3 {
+  margin: 0px 0px 0px -160px; 
+  display: grid;
+  align-content: end;
+}
+
+/* Portfolio */
+#portfolio {
+  border: solid 3px red;
+
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "bookcases bedroom patio"
+  "couches couches patio"
+  "desks desks desks"
+  ;
+}
+
+#bookcases {
+  grid-area: bookcases;
+  background-image: url("../images/bookcases@2x.png");
+
+}
+#bedroom {
+  grid-area: bedroom;
+  background-image: url("../images/beds@2x.png");
+}
+
+#couches {
+  grid-area: couches;
+  background-image: url("../images/couch@2x.png");
+}
+
+#patio {
+  grid-area: patio;
+  background-image: url("../images/patio@2x.png");
+}
+
+#desks {
+  grid-area: desks;
+  background-image: url("../images/desks@2x.png");
+}
+
+.portfolioGridArea {
+  border: solid 3px red;
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 7px;
+  margin: 5px;
+  cursor: pointer;
   display: grid;
-  align-content: top;
-  border-bottom: 1px solid black;
+  align-content: end;
+}
+
+
+
+/* Contents */
+#me {
+  size: 246px 400px;
+  opacity: 0.7;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#whiteLine {
+  display: inline-block;
+  margin: -160px 0px 0px 0px; 
+}
+
+
+#blackLine {
+  position: top-left;
+  display: inline-block;
+  margin: 20px 0px 0px -70px; 
+
+}
+
+#role img {
+  position: top-left;
+}
+
+
+
+/* Portfolio Grid CSS */
+#portfolio {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "bookcases bedroom patio"
+  "couches couches patio"
+  "desks desks desks"
+  ;
 }
 
 /* Footer */
@@ -119,8 +221,9 @@ body {
 /* Typography CSS */
 p {
   font-size: 14px;
-  color: #999999;
+  color: #111;
 }
+
 
 h1 {
   font-size: 16px;
@@ -142,26 +245,78 @@ h3 {
   margin: 0px 0px;
 }
 
+#role p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+#words p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* List Style */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+font-size: 14px;
+margin: 0.8em 0;
+}
+
+
+
 /* Responsive Code */
 @media only screen and (max-width: 1000px) {
   #navigation {
+    margin-right: auto;
+  }
+
+  .icons {
     margin-left: auto;
+  }
+
+  #designer {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  #words {
+    margin: 5px;
+  }
+  #blackLine {
+    margin: 0px -26px;
+  }
   #headline {
     position: static;
     margin: 20px;
   }
   #categoryGrid {
-    grid-template-rows: 300px 50px 10px 130px 240px;
+    grid-template-rows: 420px 250px 50px 380px 240px 260px 240px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "picture"
-      "name"
-      "quote"
-      "line"
-      "words";
+      "role"
+      "words"
+      "experience"
+      "education"
+      "skills"
+      "contact";
   }
+
+  #portfolio {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bookcases"
+      "bedroom"
+      "patio"
+      "couches"
+      "desks";
+  }
+}
 }
