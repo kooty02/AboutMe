@@ -19,7 +19,7 @@ body {
   grid-template-rows: 30px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "logo name icons"
+  "logo name icons";
 }
 #logo {
   grid-area: logo;
@@ -55,32 +55,27 @@ body {
 
 #picture {
   grid-area: picture;
+
 }
 
 #role {
   grid-area: role;
 }
-
 #words {
   grid-area: words;
 }
-
 #empty {
   grid-area: empty;
 }
-
 #experience {
   grid-area: experience;
 }
-
 #education {
   grid-area: education;
 }
-
 #skills {
   grid-area: skills;
 }
-
 #contact {
   grid-area: contact;
 }
@@ -111,67 +106,104 @@ body {
   align-content: end;
 }
 
-/* Portfolio */
-#portfolio {
-  border: solid 3px red;
 
-  margin: 0px 5%;
+/* Portfolio Grid */
+#portfolio {
+  margin: 5.5%;
   display: grid;
   grid-template-rows: 300px 300px 300px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "bookcases bedroom patio"
-  "couches couches patio"
-  "desks desks desks"
-  ;
+  "bookcases bookcases bookcases"
+  "couches couches couches"
+  "bedroom bedroom patio";
 }
 
 #bookcases {
   grid-area: bookcases;
-  background-image: url("../images/bookcases@2x.png");
-
+  background-image: url("../img/rectangle.svg");
+}
+#couches {
+  grid-area: couches;
+  background-image: url("../img/rectangle.svg");
 }
 #bedroom {
   grid-area: bedroom;
-  background-image: url("../images/beds@2x.png");
+  background-image: url("../img/rectangle.svg");
 }
-
-#couches {
-  grid-area: couches;
-  background-image: url("../images/couch@2x.png");
-}
-
 #patio {
   grid-area: patio;
-  background-image: url("../images/patio@2x.png");
-}
-
-#desks {
-  grid-area: desks;
-  background-image: url("../images/desks@2x.png");
+  background-image: url("../img/rectangle.svg");
 }
 
 .portfolioGridArea {
-  border: solid 3px red;
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 5px;
   cursor: pointer;
   display: grid;
   align-content: end;
 }
 
+.portfolioGridArea2 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  margin: 0px 10px 0px 0px;
+}
 
+.portfolioGridArea3 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  margin: 0px 0px 0px 10px;
+}
+
+#heading {
+  height: 50px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+/* Heading Grid */
+#heading {
+  display: flex;
+  flex-direction: row;
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "project details myRole";
+}
+
+#project {
+  grid-area: project;
+  box-align: top-left;
+}
+#details {
+  grid-area: details;
+  box-align: top-left;
+}
+#myRole {
+  grid-area: myRole;
+  text-align: right;
+}
 
 /* Contents */
-#me {
-  size: 246px 400px;
+#me img {
+  background-size: auto;
   opacity: 0.7;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  max-width: 100%;
+  height: auto;
 }
 
 #whiteLine {
@@ -191,19 +223,6 @@ body {
   position: top-left;
 }
 
-
-
-/* Portfolio Grid CSS */
-#portfolio {
-  margin: 0px 5%;
-  display: grid;
-  grid-template-rows: 300px 300px 300px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-  "bookcases bedroom patio"
-  "couches couches patio"
-  "desks desks desks";
-}
 
 /* Footer */
 #footer {
@@ -313,14 +332,13 @@ margin: 0.8em 0;
   }
 
   #portfolio {
-    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "bookcases"
-      "bedroom"
-      "patio"
       "couches"
-      "desks";
+      "bedroom"
+      "patio";
   }
 }
 
