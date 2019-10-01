@@ -1,41 +1,43 @@
-#background {
-  width: 600px 400px;
-  background-color: #C9C5BB;
-  border: 10px red;
-}
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #444444;
 }
 
 /* Background */
-
-/* Navigation CSS */
-#logo {
-  height: 30px;
+#background {
+  width: 600px 400px;
+  background-color: #C9C5BB;
+  border: 10px red;
 }
 
-#navBar {
+/* Navigation Grid */
+#navigationGrid {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin: 5.5%;
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "logo name icons"
 }
-#navigation {
-  display: flex;
-  width: 60%;
-  align-items: flex-end;
-  justify-content: space-evenly;
+#logo {
+  grid-area: logo;
+  height: 30px;
 }
-
-.icons {
+#name {
+  grid-area: name;
+}
+#icons {
+  grid-area: icons;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  cursor: pointer;
+}
+#icons p {
+  margin: 0px 0px 0px 20px;
   text-decoration: none;
-  margin: 15px;
+  cursor: pointer;
 }
 
 
@@ -43,7 +45,7 @@ body {
 #categoryGrid {
   margin: 0px 5%;
   display: grid;
-  grid-template-rows: 400px 600px 400px;
+  grid-template-rows: 400px 400px 300px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
   "picture role words"
@@ -75,6 +77,14 @@ body {
   grid-area: education;
 }
 
+#skills {
+  grid-area: skills;
+}
+
+#contact {
+  grid-area: contact;
+}
+
 .categoryGridArea {
   background-repeat: no-repeat;
   margin: 0px;
@@ -82,8 +92,15 @@ body {
   align-content: top;
 }
 
+.categoryGridArea4 {
+  background-repeat: no-repeat;
+  margin: -90px 0px 0px 0px;
+  display: grid;
+  align-content: top;
+}
+
 .categoryGridArea2 {
-  margin: 0px;
+  margin: 80px 0px 0px 0px;
   display: grid;
   align-content: top;
 }
@@ -185,8 +202,7 @@ body {
   grid-template-areas:
   "bookcases bedroom patio"
   "couches couches patio"
-  "desks desks desks"
-  ;
+  "desks desks desks";
 }
 
 /* Footer */
@@ -223,36 +239,30 @@ p {
   font-size: 14px;
   color: #111;
 }
-
-
+#role p {
+  font-size: 20px;
+  line-height: 28px;
+}
+#words p {
+  font-size: 16px;
+  line-height: 20px;
+}
 h1 {
   font-size: 16px;
   font-weight: 300;
   margin: 0px 0px;
 }
-
 h2 {
   font-size: 36px;
   font-weight: 300;
   line-height: 40px;
   margin: 0px 0px;
 }
-
 h3 {
   font-size: 16px;
   font-weight: 300;
   line-height: 21px;
-  margin: 0px 0px;
-}
-
-#role p {
-  font-size: 20px;
-  line-height: 28px;
-}
-
-#words p {
-  font-size: 16px;
-  line-height: 20px;
+  margin: 0px 5.5%;
 }
 
 /* List Style */
@@ -270,17 +280,9 @@ margin: 0.8em 0;
 
 
 /* Responsive Code */
-@media only screen and (max-width: 1000px) {
-  #navigation {
-    margin-right: auto;
-  }
-
-  .icons {
+@media only screen and (max-width: 1600px) {
+ #icons {
     margin-left: auto;
-  }
-
-  #designer {
-    display: none;
   }
 }
 
@@ -291,17 +293,19 @@ margin: 0.8em 0;
   #blackLine {
     margin: 0px -26px;
   }
-  #headline {
-    position: static;
-    margin: 20px;
+
+  #name {
+    display: none;
   }
+
   #categoryGrid {
-    grid-template-rows: 420px 250px 50px 380px 240px 260px 240px;
+    grid-template-rows: 420px 200px 30px 20px 360px 390px 130px 300px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "picture"
       "role"
       "words"
+      "empty"
       "experience"
       "education"
       "skills"
@@ -319,4 +323,4 @@ margin: 0.8em 0;
       "desks";
   }
 }
-}
+
