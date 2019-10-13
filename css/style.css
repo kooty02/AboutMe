@@ -1,6 +1,52 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #444444;
+  color: #333333;
+}
+
+/* Typography CSS */
+p {
+  font-size: 14px;
+  color: #111;
+}
+#role p {
+  font-size: 20px;
+  line-height: 28px;
+}
+#words p {
+  font-size: 16px;
+  line-height: 20px;
+}
+h1 {
+  font-size: 28px;
+  font-weight: bolder;
+  line-height: 32px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: bolder;
+  font-weight: 400;
+}
+h4 {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 200;
+  color: #111;
+}
+
+.subHeading {
+  margin: 0px 5.5%;
+}
+
+/* List Style */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+font-size: 14px;
+margin: 0.8em 0;
 }
 
 /* Background */
@@ -20,6 +66,7 @@ body {
   flex-direction: row;
   margin: 5.5%;
   display: grid;
+  grid-column-gap: 15px;
   grid-template-rows: 30px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
@@ -37,11 +84,36 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  list-style-type: none;
 }
-#icons p {
-  margin: 0px 0px 0px 20px;
+#icons li {
   text-decoration: none;
   cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Links CSS */
+.cool-link {
+  display: inline-block;
+  color: #333333;
+  text-decoration: none;
+  margin: 0px 0px 0px 20px;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  margin: 2px 0px 0px 0px;
+  background: #333333;
+  transition: width .3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width .3s;
 }
 
 
@@ -52,6 +124,7 @@ body {
   z-index: 100;
   margin: 0px 5%;
   display: grid;
+  grid-column-gap: 15px;
   grid-template-rows: 400px 400px 300px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
@@ -62,9 +135,7 @@ body {
 
 #picture {
   grid-area: picture;
-
 }
-
 #role {
   grid-area: role;
 }
@@ -114,11 +185,53 @@ body {
 }
 
 
+/* Portfolio Elements */
+.works {
+  margin: 0px 5.5%;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-left: 60px;
+  border-bottom: 60px;
+  border-color: white transparent;
+  border-style: solid;
+  z-index: 50;
+}
+
+figure img {
+  background-size: auto;
+  display: grid;
+  max-width: 100%;
+  height: 360px;
+  float: left;
+  object-fit: cover;
+  overflow: hidden;
+  }
+
+
+/* Portfolio Hover */
+figure:hover {
+	opacity: 1;
+}
+.hover01 figure img {
+	filter: grayscale(60%);
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	filter: grayscale(0);
+}
+
+
 /* Portfolio Grid */
 #portfolio {
+  position: relative;
   margin: 5.5%;
   display: grid;
-  grid-template-rows: 300px 300px 300px;
+  grid-column-gap: 15px;
+  grid-template-rows: 360px 360px 360px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
   "bookcases bookcases bookcases"
@@ -128,90 +241,68 @@ body {
 
 #bookcases {
   grid-area: bookcases;
-  background-image: url("../img/rectangle.svg");
 }
 #couches {
   grid-area: couches;
-  background-image: url("../img/rectangle.svg");
 }
 #bedroom {
   grid-area: bedroom;
-  background-image: url("../img/rectangle.svg");
 }
 #patio {
   grid-area: patio;
-  background-image: url("../img/rectangle.svg");
 }
 
 .portfolioGridArea {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  background-color: #333333;;
   cursor: pointer;
   display: grid;
-  align-content: end;
-}
-
-.portfolioGridArea2 {
-  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: grid;
-  align-content: end;
-  margin: 0px 10px 0px 0px;
-}
-
-.portfolioGridArea3 {
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: grid;
-  align-content: end;
-  margin: 0px 0px 0px 10px;
-}
-
-#heading {
-  height: 50px;
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  padding-top: 10px;
+  width: 100%;
+  object-fit: contain;
 }
 
 /* Heading Grid */
 #heading {
+  z-index: 100;
+  background-color: white;
+  padding-top: 12px;
   display: flex;
   flex-direction: row;
   display: grid;
-  grid-template-rows: 30px;
+  grid-column-gap: 15px;
+  grid-template-rows: 80px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "project details myRole";
+  "project details details";
 }
+
 
 #project {
   grid-area: project;
-  box-align: top-left;
-}
-#details {
-  grid-area: details;
-  box-align: top-left;
-}
-#myRole {
-  grid-area: myRole;
-  text-align: right;
 }
 
-/* Contents */
+#details {
+  grid-area: details;
+  color: #b3b3b3;
+}
+
+#study {
+  grid-area: study;
+}
+
+
+/* Images */
 #me img {
   background-size: auto;
   opacity: 0.6;
   display: grid;
   max-width: 100%;
   height: auto;
-}
+  float: left;
+  object-fit: cover;
+  }
 
 #whiteLine {
   display: inline-block;
@@ -230,9 +321,91 @@ body {
   position: top-left;
 }
 
+#finalWork img {
+  background-size: auto;
+  display: grid;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Project Hero CSS */
+#projectGrid {
+  position: relative;
+  top: 170px;
+  z-index: 100;
+  margin: 0px 5%;
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-rows: 100px 150px 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "projectSummary projectSummary projectSummary"
+  "projectName myRole desktopImg"
+  "time team desktopImg";
+}
+
+#projectName {
+  grid-area: projectName;
+}
+#myRole {
+  grid-area: myRole;
+}
+#time {
+  grid-area: time;
+}
+#team {
+  grid-area: team;
+}
+#projectSummary {
+  grid-area: projectSummary;
+}
+#empty {
+  grid-area: empty;
+}
+#desktopImg {
+  grid-area: desktopImg;
+}
+
+
+.categoryGridArea {
+  background-repeat: no-repeat;
+  margin: 0px;
+  display: grid;
+  align-content: top;
+}
+
+.categoryGridArea5 {
+  background-repeat: no-repeat;
+  margin: 0px 0px 0px 0px;
+  display: grid;
+  align-content: center;
+}
+
+.categoryGridArea2 {
+  margin: 80px 0px 0px 0px;
+  display: grid;
+  align-content: top;
+}
+
+.categoryGridArea3 {
+  margin: 0px 0px 0px -160px; 
+  display: grid;
+  align-content: end;
+}
+
+/* 2nd Navigation Testing
+#greyLine {
+  border-bottom: solid 2px #F5F5F5;
+  height: 80px;
+  background-color: white;
+  display: block;
+}
+ */
+
 
 /* Footer */
-#footer {
+.footer {
+  position: absolute;
   display: flex;
   align-items: right;
   justify-content: flex-end;
@@ -255,61 +428,12 @@ body {
   height: 12px;
 }
 
-/* Hover */
-#navigation p:hover {
-  color: #111;
-}
-
-/* Typography CSS */
-p {
-  font-size: 14px;
-  color: #111;
-}
-#role p {
-  font-size: 20px;
-  line-height: 28px;
-}
-#words p {
-  font-size: 16px;
-  line-height: 20px;
-}
-h1 {
-  font-size: 16px;
-  font-weight: 300;
-  margin: 0px 0px;
-}
-h2 {
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 40px;
-  margin: 0px 0px;
-}
-h3 {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 21px;
-  margin: 0px 5.5%;
-}
-
-/* List Style */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-font-size: 14px;
-margin: 0.8em 0;
-}
-
-
 
 /* Responsive Code */
 @media only screen and (max-width: 1600px) {
- #icons {
-    margin-left: auto;
-  }
+.space {
+  height:50px;
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -322,6 +446,13 @@ margin: 0.8em 0;
 
   #name {
     display: none;
+  }
+
+  #navigationGrid {
+    grid-template-rows: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "logo icons";
   }
 
   #categoryGrid {
@@ -347,5 +478,23 @@ margin: 0.8em 0;
       "bedroom"
       "patio";
   }
+
+#projectGrid {
+  grid-template-rows: 300px 300px 300px 300px 300px 300px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "projectName"
+    "myRole"
+    "time"
+    "team"
+    "projectSummary"
+    "desktopImg";
 }
 
+#heading {
+  grid-template-rows: 30px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "project";
+}
+}

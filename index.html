@@ -3,7 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="css/reset.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <title>Tae Yun Koo</title>
 </head>
@@ -20,9 +20,11 @@
         Graphic Designer. UI UX Designer.
       </div>
       <div id="icons">
-        <p>Works</p>
-        <p>About</p>
-        <p>Resume</p>
+        <ul>
+          <li><a class="cool-link" href="#works">WORKS</a></li>
+          <li><a class="cool-link" href="#">ABOUT</a></li>
+          <li><a class="cool-link" href="#">RESUME</a></li>
+        </ul>
       </div>
   </div>
   </section>
@@ -38,8 +40,8 @@
     </div>
 
     <div id="role" class="categoryGridArea">
-      <p>I’m a graphic designer who is now combining work experience into UI UX design.
-      </p>
+      <h1>I’m a graphic designer now combining work experience into UI UX design.
+      </h1>
       <div id="whiteLine">
         <img src="img/whiteline.svg">
       </div>
@@ -135,62 +137,70 @@
         <li>Atlanta, GA</li>
       </ul>
     </div>
-
   </section>
 
 
   <!--Portfolio-->
-  <div class="subHeading">
-    <h3>UI UX DESIGN</h3>
+  <div id="works" class="subHeading">
+    <h2>UI UX DESIGN</h2>
   </div>
 
   <section id="portfolio">
 
-    <div id="bookcases" class="portfolioGridArea">
+    <div id="bookcases" class="portfolioGridArea hover01">
+      <div class="triangle"></div>
+      <figure><img src="img/mainAI2.png"></figure>
       <div id="heading">
-        <div id="project">AUTISM IMPROVISED
-        </div>
-        <div id="details">Non-profit organization website redesign<br>
-          AUG 2019
-        </div>
-        <div id="myRole">Research. Prototype. Wireframing. Testing. Iterate. Hi-fi</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="couches" class="portfolioGridArea">
-      <div id="heading">
-        <div id="project">CDC
-        </div>
-        <div id="details">Government website redesign<br>
-          AUG 2019
-        </div>
-        <div id="myRole">Research. Prototype. Wireframing. Testing. Iterate. Hi-fi</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="bedroom" class="portfolioGridArea2">
-      <div id="heading">
-        <div id="project">H2Yo
-        </div>
-        <div id="details">App Project<br>
-          AUG 2019</p>
-        </div>
-        <div id="myRole">Research. Prototype. Wireframing
-        </div>
-      </div>
-    </div>
-
-    <div id="patio" class="portfolioGridArea3">
-      <div id="heading">
-        <div id="project">TRVL GEM
+        <div id="project">
+          <h2>AUTISM IMPROVISED</h2>
         </div>
         <div id="details">
-          </p>
+          <h2>Non-profit organization website redesign</h2>
+          <h4>Research. Prototype. Wireframing. Testing. Iterate. Hi-fi</h4>
         </div>
-        <div id="myRole">App Project<br>
-          AUG 2019</p>
+      </div>
+    </div>
+
+    <div id="couches" class="portfolioGridArea hover01">
+        <div class="triangle"></div>
+        <figure>
+          <img src="img/mainCDC2x.png">
+        </figure>
+      <div id="heading">
+        <div id="project">
+          <h2>CDC</h2>
+        </div>
+        <div id="details">
+          <h2>Government website redesign</h2>
+          <h4>Research. Prototype. Wireframing. Testing. Iterate. Hi-fi</h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="bedroom" class="portfolioGridArea hover01">
+        <div class="triangle"></div>
+        <figure><img src="img/mainCDC2x.png"></figure>
+      <div id="heading">
+        <div id="project">
+          <h2>H2Yo</h2>
+        </div>
+        <div id="details">
+          <h2>App Project</h2>
+          <h4>Research. Prototype. Wireframing. Testing. Iterate. Hi-fi</h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="patio" class="portfolioGridArea hover01">
+        <div class="triangle"></div>
+        <figure><img src="img/mainCDC2x.png"></figure>
+      <div id="heading">
+        <div id="project">
+          <h2>TRVL GEM</h2>
+        </div>
+        <div id="details">
+          <h2>App Project</h2>
+          <h4>Research. Prototype. Wireframing. Testing. Iterate. Hi-fi</h4>
         </div>
       </div>
     </div>
@@ -198,14 +208,14 @@
 
   </section>
 
-</div>
+  </div>
 
 
 
 </body>
 
 <!--Social Links-->
-<footer id="footer">
+<footer class="footer">
   <div id="socialLinks">
     <img id="Linkedin" src="img/LinkedinLogo.png">
     <img id="Indeed" src="img/IndeedLogo.png">
