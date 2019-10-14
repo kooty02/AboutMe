@@ -24,7 +24,6 @@ h1 {
 h2 {
   font-size: 18px;
   font-weight: bolder;
-  font-weight: 400;
 }
 h4 {
   font-size: 14px;
@@ -35,6 +34,7 @@ h4 {
 
 .subHeading {
   margin: 0px 5.5%;
+  height: 20px;
 }
 
 /* List Style */
@@ -52,10 +52,10 @@ margin: 0.8em 0;
 /* Background */
 .background {
   position: absolute;
-  z-index: 1;
   width: 100%;
   height: 532px;
   background-color: #E0E0E0;
+  margin: -5.5% 0;
 }
 
 /* Navigation Grid */
@@ -64,7 +64,7 @@ margin: 0.8em 0;
   z-index: 50;
   display: flex;
   flex-direction: row;
-  margin: 5.5%;
+  margin: 5.5% 5.5% 7.5% 5.5%;
   display: grid;
   grid-column-gap: 15px;
   grid-template-rows: 30px;
@@ -120,7 +120,6 @@ margin: 0.8em 0;
 /* Category Grid CSS */
 #categoryGrid {
   position: relative;
-  top: 170px;
   z-index: 100;
   margin: 0px 5%;
   display: grid;
@@ -165,13 +164,6 @@ margin: 0.8em 0;
   align-content: top;
 }
 
-.categoryGridArea4 {
-  background-repeat: no-repeat;
-  margin: -90px 0px 0px 0px;
-  display: grid;
-  align-content: top;
-}
-
 .categoryGridArea2 {
   margin: 80px 0px 0px 0px;
   display: grid;
@@ -184,6 +176,13 @@ margin: 0.8em 0;
   align-content: end;
 }
 
+.categoryGridArea4 {
+  background-repeat: no-repeat;
+  margin: -90px 0px 0px 0px;
+  display: grid;
+  align-content: top;
+}
+
 
 /* Portfolio Elements */
 .works {
@@ -192,24 +191,20 @@ margin: 0.8em 0;
 
 .triangle {
   position: absolute;
-  bottom: 0px;
+  bottom: 72px;
   right: 0px;
-  border-left: 60px;
-  border-bottom: 60px;
+  border-left: 40px;
+  border-bottom: 40px;
   border-color: white transparent;
   border-style: solid;
   z-index: 50;
 }
 
 figure img {
-  background-size: auto;
-  display: grid;
-  max-width: 100%;
-  height: 360px;
+  background-size: cover;
+  width: 100%;
   float: left;
-  object-fit: cover;
-  overflow: hidden;
-  }
+}
 
 
 /* Portfolio Hover */
@@ -217,7 +212,8 @@ figure:hover {
 	opacity: 1;
 }
 .hover01 figure img {
-	filter: grayscale(60%);
+  object-fit: cover;
+	filter: grayscale(80%);
 	transition: .3s ease-in-out;
 }
 .hover01 figure:hover img {
@@ -227,16 +223,18 @@ figure:hover {
 
 /* Portfolio Grid */
 #portfolio {
+  object-fit: cover;
   position: relative;
   margin: 5.5%;
   display: grid;
-  grid-column-gap: 15px;
-  grid-template-rows: 360px 360px 360px;
+  grid-column-gap: 20px;
+  grid-template-rows: 360px 360px 360px 360px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
   "bookcases bookcases bookcases"
-  "couches couches couches"
-  "bedroom bedroom patio";
+  "bedroom bedroom bedroom"
+  "desk couches couches"
+  "desk patio patio";
 }
 
 #bookcases {
@@ -248,36 +246,36 @@ figure:hover {
 #bedroom {
   grid-area: bedroom;
 }
+#desk {
+  grid-area: desk;
+}
 #patio {
   grid-area: patio;
 }
 
 .portfolioGridArea {
+  background-color: green;
   position: relative;
-  background-color: #333333;;
   cursor: pointer;
   display: grid;
-  background-size: cover;
-  background-position: center;
+  align-items: center;
+  align-content: end;
+  overflow: hidden;
   width: 100%;
-  object-fit: contain;
+  height: auto;
 }
 
 /* Heading Grid */
-#heading {
-  z-index: 100;
+.headingGridArea {
   background-color: white;
   padding-top: 12px;
-  display: flex;
-  flex-direction: row;
   display: grid;
   grid-column-gap: 15px;
-  grid-template-rows: 80px;
+  grid-template-rows: 60px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
   "project details details";
 }
-
 
 #project {
   grid-area: project;
@@ -288,13 +286,8 @@ figure:hover {
   color: #b3b3b3;
 }
 
-#study {
-  grid-area: study;
-}
-
-
 /* Images */
-#me img {
+#me {
   background-size: auto;
   opacity: 0.6;
   display: grid;
@@ -409,7 +402,7 @@ figure:hover {
   display: flex;
   align-items: right;
   justify-content: flex-end;
-  margin: 5%;
+  margin: 5.5%;
 }
 
 #footer img {
@@ -431,9 +424,6 @@ figure:hover {
 
 /* Responsive Code */
 @media only screen and (max-width: 1600px) {
-.space {
-  height:50px;
-}
 }
 
 @media only screen and (max-width: 600px) {
@@ -455,8 +445,15 @@ figure:hover {
     "logo icons";
   }
 
+  .hover01 figure img {
+    object-fit: cover;
+    width: 600px;
+    height: auto;
+    text-align: center;
+  }
+
   #categoryGrid {
-    grid-template-rows: 420px 200px 30px 20px 360px 390px 130px 500px;
+    grid-template-rows: 420px 240px 30px 20px 360px 390px 130px 300px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "picture"
@@ -470,15 +467,24 @@ figure:hover {
   }
 
   #portfolio {
-    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px 300px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "bookcases"
-      "couches"
       "bedroom"
+      "couches"
+      "desk"
       "patio";
   }
 
+  #heading {
+    grid-template-rows: 25px 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "project"
+    "details";
+  }
+  
 #projectGrid {
   grid-template-rows: 300px 300px 300px 300px 300px 300px;
   grid-template-columns: 1fr;
@@ -489,12 +495,5 @@ figure:hover {
     "team"
     "projectSummary"
     "desktopImg";
-}
-
-#heading {
-  grid-template-rows: 30px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "project";
 }
 }
