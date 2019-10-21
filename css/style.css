@@ -1,35 +1,27 @@
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Barlow', sans-serif;
   color: #333333;
 }
 
 /* Typography CSS */
-p {
-  font-size: 14px;
-  color: #111;
-}
-#role p {
-  font-size: 20px;
-  line-height: 28px;
-}
-#words p {
-  font-size: 16px;
-  line-height: 20px;
-}
 h1 {
-  font-size: 28px;
-  font-weight: bolder;
-  line-height: 32px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 38px;
 }
 h2 {
+  color: #b3b3b3;
   font-size: 18px;
-  font-weight: bolder;
+  font-weight: 500;
+  line-height: 20px;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 500;
 }
 h4 {
   font-size: 14px;
-  line-height: 21px;
-  font-weight: 200;
-  color: #111;
+  font-weight: 400;
 }
 
 .subHeading {
@@ -45,8 +37,7 @@ ul {
 }
 
 li {
-font-size: 14px;
-margin: 0.8em 0;
+margin: 15px 0;
 }
 
 /* Background */
@@ -58,13 +49,14 @@ margin: 0.8em 0;
   margin: -5.5% 0;
 }
 
+
 /* Navigation Grid */
 #navigationGrid {
   position: relative;
   z-index: 50;
   display: flex;
   flex-direction: row;
-  margin: 5.5% 5.5% 7.5% 5.5%;
+  margin: 4% 5.5% 8% 5.5%;
   display: grid;
   grid-column-gap: 15px;
   grid-template-rows: 30px;
@@ -83,14 +75,14 @@ margin: 0.8em 0;
   grid-area: icons;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: baseline;
   list-style-type: none;
 }
 #icons li {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 /* Links CSS */
@@ -123,13 +115,14 @@ margin: 0.8em 0;
   z-index: 100;
   margin: 0px 5%;
   display: grid;
-  grid-column-gap: 15px;
-  grid-template-rows: 400px 400px 300px;
+  grid-column-gap: 25px;
+  grid-template-rows: 120px 240px 200px 200px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "picture role words"
-  "empty experience education"
-  "empty skills contact";
+  "empty role role"
+  "empty words1 words2"
+  "experience education skills"
+  "experience education skills";
 }
 
 #picture {
@@ -138,8 +131,13 @@ margin: 0.8em 0;
 #role {
   grid-area: role;
 }
-#words {
-  grid-area: words;
+#words1 {
+  grid-area: words1;
+  line-height: 24px;
+}
+#words2 {
+  grid-area: words2;
+  line-height: 24px;
 }
 #empty {
   grid-area: empty;
@@ -191,10 +189,10 @@ margin: 0.8em 0;
 
 .triangle {
   position: absolute;
-  bottom: 72px;
+  bottom: 68px;
   right: 0px;
-  border-left: 40px;
-  border-bottom: 40px;
+  border-left: 30px;
+  border-bottom: 30px;
   border-color: white transparent;
   border-style: solid;
   z-index: 50;
@@ -268,7 +266,7 @@ figure:hover {
 /* Heading Grid */
 .headingGridArea {
   background-color: white;
-  padding-top: 12px;
+  padding-top: 8px;
   display: grid;
   grid-column-gap: 15px;
   grid-template-rows: 60px;
@@ -283,7 +281,6 @@ figure:hover {
 
 #details {
   grid-area: details;
-  color: #b3b3b3;
 }
 
 /* Images */
@@ -299,14 +296,12 @@ figure:hover {
 
 #whiteLine {
   display: inline-block;
-  margin: -160px 0px 0px 0px; 
 }
 
 
-#blackLine {
-  position: top-left;
-  display: inline-block;
-  margin: 20px 0px 0px -70px; 
+#smallblackline {
+  width: 20px;
+  display: inline;
 
 }
 
@@ -317,14 +312,41 @@ figure:hover {
 #finalWork img {
   background-size: auto;
   display: grid;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
+
+
+
+/* Footer */
+.footer {
+  position: absolute;
+  display: flex;
+  align-items: right;
+  justify-content: flex-end;
+  margin: 5.5%;
+}
+
+#footer img {
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0px 2px;
+}
+
+#Linkedin {
+  height: 15px;
+}
+#Indeed {
+  height: 18px;
+}
+#Email {
+  height: 12px;
+}
+
 
 /* Project Hero CSS */
 #projectGrid {
   position: relative;
-  top: 170px;
   z-index: 100;
   margin: 0px 5%;
   display: grid;
@@ -386,40 +408,89 @@ figure:hover {
   align-content: end;
 }
 
-/* 2nd Navigation Testing
-#greyLine {
-  border-bottom: solid 2px #F5F5F5;
-  height: 80px;
-  background-color: white;
-  display: block;
-}
- */
-
-
-/* Footer */
-.footer {
-  position: absolute;
-  display: flex;
-  align-items: right;
-  justify-content: flex-end;
+/* Testing Grid */
+.grid-container {
   margin: 5.5%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-#footer img {
-  cursor: pointer;
-  text-decoration: none;
-  margin: 0px 2px;
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
 
-#Linkedin {
-  height: 15px;
+ /* Case Study Grid */
+.caseGridArea {
+  background-color: white;
+  margin: 5.5%;
+  padding-top: 12px;
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-rows: 300px 60px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "contentImg contentImg contentImg"
+  "content1 content2 content3";
 }
-#Indeed {
-  height: 18px;
+
+#contentImg {
+  grid-area: contentImg;
 }
-#Email {
-  height: 12px;
+#content1 {
+  grid-area: content1;
 }
+#content2 {
+  grid-area: content2;
+}
+#content3 {
+  grid-area: content3;
+}
+
+.contentImg {
+object-fit: cover;
+background-size: cover;
+width: 100%;
+height: auto;
+float: left;
+}
+
+
+
+#project {
+  grid-area: project;
+}
+
+#details {
+  grid-area: details;
+}
+
+.flex-grid-thirds {
+  background-color: pink;
+  margin: 5.5%;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+
+@media (max-width: 400px) {
+  .flex-grid,
+  .flex-grid-thirds {
+    display: block;
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
 
 
 /* Responsive Code */
@@ -430,7 +501,7 @@ figure:hover {
   #words {
     margin: 5px;
   }
-  #blackLine {
+  #smallblackline {
     margin: 0px -26px;
   }
 
@@ -453,17 +524,15 @@ figure:hover {
   }
 
   #categoryGrid {
-    grid-template-rows: 420px 240px 30px 20px 360px 390px 130px 300px;
+    grid-template-rows: 420px 240px 30px 20px 360px 390px;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "picture"
       "role"
-      "words"
-      "empty"
+      "words1"
+      "words2"
       "experience"
       "education"
-      "skills"
-      "contact";
+      "skills";
   }
 
   #portfolio {
