@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="72.70463010947879" width="72.70463010947844">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="82.80463010948889" width="82.80463010948844">
   <defs>
-    <path id="path-1" opacity="1" fill-rule="evenodd" d="M70.35231505473917,2.3523150547393925 L2.352315054739165,70.35231505473939 "/>
+    <path id="path-1" opacity="1" fill-rule="evenodd" d="M80.35231505483918,2.3523150548393925 L2.352315054839165,80.35231505483939 "/>
   </defs>
   <g opacity="1">
     <use xlink:href="#path-1" fill-opacity="0" stroke="rgb(128,128,128)" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"/>
