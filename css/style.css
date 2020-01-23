@@ -516,6 +516,13 @@ figure:hover {
   margin-bottom: 10px;
 }
 
+#caseImage {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /*border: 1px solid #b3b3b3;*/
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 .under {
   left: 0px;
   top: 0px;
