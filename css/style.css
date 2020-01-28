@@ -1,6 +1,7 @@
 body {
   font-family: 'Barlow', sans-serif;
   color: #333333;
+  margin: 0% 12%;
 }
 
 /* Typography CSS */
@@ -39,8 +40,9 @@ h6 {
 }
 .subHeading {
   position: relative;
-  margin: 0px 12%;
+  margin: 8% 0%;
 }
+
 .projectTitle {
   font-size: 52px;
   font-weight: 400;
@@ -86,29 +88,66 @@ margin: 15px 0;
 .background {
   position: absolute;
   width: 100%;
-  height: 532px;
+  height: 400px;
   background-color: #E0E0E0;
-  margin: -12% 0;
+  margin: -8% -12%;
 }
 
 
 /* Navigation Grid */
+/*
+ul.topnav {
+  position: relative;
+  z-index: 50;
+  margin: 12% 12%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+ul.topnav li a {
+  display: block;
+  text-align: center;
+  padding: 0px 0px 0px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+
+ul.topnav li.right {
+  float: right;
+}
+
+#logo {
+  height: 30px;
+}
+*/
+
+
 #navigationGrid {
   position: relative;
   z-index: 50;
   display: flex;
   flex-direction: row;
-  margin: 4% 12% 8% 12%;
+  margin: 8% 0%;
   display: grid;
-  grid-column-gap: 15px;
   grid-template-rows: 30px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
   grid-template-areas:
   "logo name icons";
 }
 #logo {
   grid-area: logo;
-  height: 30px;
 }
 #name {
   grid-area: name;
@@ -127,12 +166,17 @@ margin: 15px 0;
   vertical-align: bottom;
 }
 
+#logo img {
+  height: 30px;
+}
+
+
 /* Links CSS */
 .cool-link {
   display: inline-block;
   color: #333333;
   text-decoration: none;
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 15px;
 }
 
 .cool-link::after {
@@ -226,7 +270,6 @@ margin: 15px 0;
 
 /* Portfolio Elements */
 .works {
-  margin: 0px 12%;
 }
 
 .triangle {
@@ -265,7 +308,6 @@ figure:hover {
 /* Portfolio Grid */
 #portfolio {
   position: relative;
-  margin: 12%;
   display: grid;
   grid-gap: 30px;
   grid-template-rows: 260px 260px 260px;
@@ -309,6 +351,37 @@ figure:hover {
   height: auto;
   float: left;
 }
+
+
+/* Graphic Design */
+div.gallery {
+  width="600" height="600"
+  border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+  border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 10px 0px;
+    text-align: left;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 50%;
+  }
 
 
 /* Heading Grid */
@@ -366,11 +439,10 @@ figure:hover {
 
 /* Footer */
 .footer {
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: right;
   justify-content: flex-end;
-  margin: 12%;
 }
 
 #footer img {
@@ -464,11 +536,11 @@ figure:hover {
   grid-template-rows: 280px 200px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "caseImage caseImage caseImage"
+  "caseShadow caseShadow caseShadow"
   "overview1 overview1 overview2";
 }
-#caseImage {
-  grid-area: caseImage;
+#caseShadow {
+  grid-area: caseShadow;
 }
 #overview1 {
   grid-area: overview1;
@@ -516,7 +588,13 @@ figure:hover {
   margin-bottom: 10px;
 }
 
-#caseImage {
+#caseBorder {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #b3b3b3;
+}
+
+#caseShadow {
   margin-top: 10px;
   margin-bottom: 10px;
   /*border: 1px solid #b3b3b3;*/
@@ -594,7 +672,13 @@ figure:hover {
 }
 
 /* Responsive Code */
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 800px) {
+  #navigationGrid {
+    grid-template-rows: 30px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    "logo icons";
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -609,9 +693,13 @@ figure:hover {
     display: none;
   }
 
+  /*
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+*/
   #navigationGrid {
     grid-template-rows: 30px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
     "logo icons";
   }
@@ -633,8 +721,8 @@ figure:hover {
     object-fit: cover;
     height: auto;
     position: relative;
-    margin: 12%;
     width: 100%;
+    margin: 12%;
     display: grid;
     grid-row-gap: 20px;
     grid-template-rows: 170px 170px 170px 170px 170px;
@@ -646,6 +734,14 @@ figure:hover {
       "bedroom"
       "patio";
   }
+
+#portfolio {
+margin: 8% 0%;
+}
+
+.responsive {
+  width: 100%;
+}  
 
 #projectGrid {
   grid-template-rows: 300px 300px 300px 300px 300px 300px;
@@ -663,7 +759,7 @@ figure:hover {
   grid-template-rows: 240px 240px 180px;
   grid-template-columns: 1fr;
   grid-template-areas:
-  "caseImage"
+  "caseShadow"
   "overview1"
   "overview2";
 }
