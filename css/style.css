@@ -41,6 +41,7 @@ h6 {
 .subHeading {
   position: relative;
   margin: 8% 0%;
+  padding: 0px 10px;
 }
 
 .projectTitle {
@@ -48,7 +49,6 @@ h6 {
   font-weight: 400;
   letter-spacing: 2px;
   line-height: 54px;
-  margin: 0% 12%;
   text-align: left;
 }
 .projectTitleSmall {
@@ -56,21 +56,20 @@ h6 {
   font-weight: 300;
   letter-spacing: 2px;
   line-height: 44px;
-  margin: 0% 12%;
   text-align: left;
 }
 .projectCategory {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 2px;
-  margin: 2% 12%;
+  margin: 2% 0%;
   text-align: left;
 }
 
 /* Line */
 hr.line {
   border: 2px solid #333333;
-  margin: 6% 12%;
+  margin: 6% 0%;
 }
 
 /* List Style */
@@ -270,6 +269,8 @@ ul.topnav li.right {
 
 /* Portfolio Elements */
 .works {
+  position: relative;
+  z-index: 100;
 }
 
 .triangle {
@@ -283,20 +284,20 @@ ul.topnav li.right {
   z-index: 50;
 }
 
-figure img {
-  width: 100%;
-}
-
-
 
 /* Portfolio Hover */
+figure {
+  margin: 0% 0% 30px 0%;
+  padding: 0px 10px;
+}
+
 figure:hover {
 	opacity: 1;
 }
 .hover01 figure img {
   opacity: 1;
   object-fit: cover;
-	filter: grayscale(90%);
+	filter: grayscale(80%);
 	transition: .3s ease-in-out;
 }
 .hover01 figure:hover img {
@@ -309,7 +310,7 @@ figure:hover {
 #portfolio {
   position: relative;
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 20px;
   grid-template-rows: 260px 260px 260px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
@@ -337,51 +338,46 @@ figure:hover {
   grid-area: patio;
   color: #253623;
 }
-
+/*
 .portfolioGridArea {
   background-color: gray;
   position: relative;
   cursor: pointer;
   display: grid;
+  object-fit: cover;
+  width: 100%;
   align-items: baseline;
   align-content: end;
   overflow: hidden;
-  object-fit: cover;
-  width: 100%;
-  height: auto;
   float: left;
 }
+*/
 
+.portfolioGridArea {
+  background-color: gray;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#portfolio2 {
+  position: relative;
+}
 
 /* Graphic Design */
-div.gallery {
-  width="600" height="600"
-  border: 1px solid #ccc;
-  }
-  
-  div.gallery:hover {
-  border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 10px 0px;
-    text-align: left;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .responsive {
-    padding: 0 6px;
-    float: left;
-    width: 50%;
-  }
+* {
+  box-sizing: border-box;
+}
+ 
+.graphicPortfolio {
+  float: left;
+  width: 33.33%;
+}
+
+.graphicWorks::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 
 /* Heading Grid */
@@ -531,7 +527,7 @@ div.gallery {
 #caseGrid {
   display: grid;
   position: relative;
-  margin: 6% 12%;
+  margin: 6% 0%;
   grid-gap: 40px;
   grid-template-rows: 280px 200px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -559,7 +555,6 @@ div.gallery {
 
 /* Project Text */
 .caseInfo {
-  margin: 12%;
   display: grid;
   position: relative;
 }
@@ -672,16 +667,7 @@ div.gallery {
 }
 
 /* Responsive Code */
-@media only screen and (max-width: 800px) {
-  #navigationGrid {
-    grid-template-rows: 30px;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-    "logo icons";
-  }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   #words {
     margin: 5px;
   }
@@ -718,11 +704,10 @@ div.gallery {
 
   #portfolio {
     overflow: hidden;
-    object-fit: cover;
+    object-fit: contain;
     height: auto;
     position: relative;
     width: 100%;
-    margin: 12%;
     display: grid;
     grid-row-gap: 20px;
     grid-template-rows: 170px 170px 170px 170px 170px;
@@ -734,10 +719,6 @@ div.gallery {
       "bedroom"
       "patio";
   }
-
-#portfolio {
-margin: 8% 0%;
-}
 
 .responsive {
   width: 100%;
@@ -793,4 +774,9 @@ margin: 8% 0%;
 .column li {
   padding-left: 0px;
 }
+
+.graphicPortfolio {
+  width: 50%;
+}
+
 }
