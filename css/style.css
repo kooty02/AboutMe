@@ -529,15 +529,12 @@ figure:hover {
   position: relative;
   margin: 6% 0%;
   grid-gap: 40px;
-  grid-template-rows: 280px 200px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+  grid-template-columns: 2fr 1fr;
   grid-template-areas:
-  "caseShadow caseShadow caseShadow"
-  "overview1 overview1 overview2";
+  "overview1 overview2";
 }
-#caseShadow {
-  grid-area: caseShadow;
-}
+
 #overview1 {
   grid-area: overview1;
 }
@@ -572,6 +569,7 @@ figure:hover {
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 40px;
+
 }
 
 .sectionText li {
@@ -581,13 +579,16 @@ figure:hover {
 .sectionText img {
   margin-top: 10px;
   margin-bottom: 10px;
+
 }
 
+/*
 #caseBorder {
   margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid #b3b3b3;
 }
+*/
 
 #caseShadow {
   margin-top: 10px;
@@ -600,16 +601,34 @@ figure:hover {
   left: 0px;
   top: 0px;
   z-index: 1;
-  margin: auto;
 }
 
 .over {
   position: relative;
   left: 0px;
-  top: -292px;
+  top: -297px;
   z-index: 2;
-  margin: auto;
 }
+
+.under img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.over img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.flow iframe {
+  top: 297px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
 
 .grid-container {
   display: grid;
@@ -737,10 +756,9 @@ figure:hover {
 }
 
 #caseGrid {
-  grid-template-rows: 240px 240px 180px;
+  grid-template-rows: 160px 180px;
   grid-template-columns: 1fr;
   grid-template-areas:
-  "caseShadow"
   "overview1"
   "overview2";
 }
