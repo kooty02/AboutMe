@@ -139,6 +139,8 @@ ul.topnav li.right {
 
 
 #navigationGrid {
+  border-bottom: 1px solid #808080;
+  padding: 0px 0px 20px 0px;
   position: relative;
   z-index: 50;
   display: flex;
@@ -293,7 +295,7 @@ ul.topnav li.right {
 /* Portfolio Hover */
 figure {
   margin: 0% 0% 30px 0%;
-  padding: 0px 10px;
+  padding: 0px 15px;
 }
 
 figure:hover {
@@ -302,7 +304,7 @@ figure:hover {
 .hover01 figure img {
   opacity: 1;
   object-fit: cover;
-	filter: grayscale(80%);
+	filter: grayscale(90%);
 	transition: .3s ease-in-out;
 }
 .hover01 figure:hover img {
@@ -310,6 +312,9 @@ figure:hover {
 	filter: grayscale(0);
 }
 
+.hover01 figure a {
+  text-decoration: none;
+}
 
 /* Portfolio Grid */
 #portfolio {
@@ -584,7 +589,6 @@ figure:hover {
 .sectionText img {
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
 /*
@@ -600,6 +604,15 @@ figure:hover {
   margin-bottom: 10px;
   /*border: 1px solid #b3b3b3;*/
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gifVideo {
+  display: flex;
+  background-color: #2B2B2B;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 150px;
 }
 
 .under {
@@ -708,6 +721,8 @@ margin-right: auto;
   ul.topnav li {float: none;}
 */
   #navigationGrid {
+    border-bottom: 1px solid #808080;
+    padding: 0px 0px 15px 0px;
     grid-template-rows: 30px;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
@@ -800,6 +815,15 @@ margin-right: auto;
 
 .graphicPortfolio {
   width: 50%;
+}
+
+.gifVideo {
+  display: block;
+  background-color: #2B2B2B;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 60px;
 }
 
 }
