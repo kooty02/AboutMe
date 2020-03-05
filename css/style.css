@@ -689,6 +689,11 @@ margin-right: auto;
     display: none;
   }
 
+  h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
   h3 {
     font-size: 14px;
     font-weight: 500;
@@ -702,6 +707,23 @@ margin-right: auto;
     letter-spacing: 1px;
   }
 
+  .projectCategory {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 4% 0% 2% 0%;
+    text-align: left;
+    padding: 0px 15px; 
+  }
+
+  .projectTitle {
+    font-size: 38px;
+  }
+  .projectTitleSmall {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
   #navigationGrid {
     padding: 0px 15px 20px 15px;
     grid-template-columns: 1fr 3fr;
@@ -711,6 +733,10 @@ margin-right: auto;
 
   #logo img {
     height: 25px;
+  }
+
+  .sectionText {
+    margin-bottom: 0px;
   }
 
   #categoryGrid {
@@ -760,7 +786,7 @@ margin-right: auto;
 }
 
 #caseGrid {
-  grid-template-rows: 160px 180px;
+  grid-template-rows: 100px 180px;
   grid-template-columns: 1fr;
   grid-template-areas:
   "overview1"
