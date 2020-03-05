@@ -104,46 +104,7 @@ margin: 15px 0;
 position: relative;
 }
 
-/* Navigation Grid */
-/*
-ul.topnav {
-  position: relative;
-  z-index: 50;
-  margin: 12% 12%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-ul.topnav li {
-  float: left;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-
-ul.topnav li a {
-  display: block;
-  text-align: center;
-  padding: 0px 0px 0px 16px;
-  text-decoration: none;
-}
-
-ul.topnav li a:hover:not(.active) {background-color: #111;}
-
-
-ul.topnav li.right {
-  float: right;
-}
-
-#logo {
-  height: 30px;
-}
-*/
-
-
+/* Navigation */
 #navigationGrid {
   padding: 0px 15px 20px 15px;
   position: relative;
@@ -169,6 +130,7 @@ ul.topnav li.right {
   justify-content: flex-end;
   align-items: baseline;
   list-style-type: none;
+  font-size: 14px;
 }
 #icons li {
   text-decoration: none;
@@ -205,8 +167,8 @@ ul.topnav li.right {
   transition: width .3s;
 }
 
+/*
 
-/* Category Grid CSS */
 #categoryGrid {
   position: relative;
   z-index: 100;
@@ -276,7 +238,8 @@ ul.topnav li.right {
   margin: -90px 0px 0px 0px;
   display: grid;
   align-content: top;
-}
+} 
+*/
 
 
 /* Portfolio Elements */
@@ -726,16 +689,28 @@ margin-right: auto;
     display: none;
   }
 
-  /*
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-*/
+  h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0%;
+  }
+  
+  h4 {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1px;
+  }
+
   #navigationGrid {
     padding: 0px 15px 20px 15px;
-    grid-template-rows: 35px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas:
     "logo icons";
+  }
+
+  #logo img {
+    height: 25px;
   }
 
   #categoryGrid {
