@@ -47,13 +47,12 @@
 
   <section id="caseGrid">
     <div id="overview1" class="caseGridArea">
-      <h2>Responsible for choosing a non-profit organization and executing a high-fidelity responsive web design
-        solution.</h2>
+      <h2>Redesign a government agency's website executing the design process by enhancing its user interface design.
+      </h2>
     </div>
     <div id="overview2" class="caseGridArea">
       <h5>MY ROLE</h5>
-      <h4>Brand Design / Information Architecture / Responsive Web Design</h4>
-      <!--<h4>Research / Planning / Design / Prototype / Test / Iterate</h4>-->
+      <h4>Research / Define / Idate / Prototype</h4>
       <h5>TIMELINE</h5>
       <h4>08/08/19 - 8/28/19 (3 weeks)</h4>
       <h5>TEAM</h5>
@@ -61,17 +60,145 @@
     </div>
   </section>
 
+
   <!--Project Text-->
   <div class="caseInfo">
 
-    <div class="sectionTitle">WHY WATER
+    <div class="sectionTitle">DEFINING = UNDERSTANDING
     </div>
     <div class="sectionText">
+      There’s a lot of information and data that the CDC website is trying and needs to convey. Although the information
+      was categorized, it was hard to easily recognize them and navigate through to find what is needed. We tried to
+      define the wireflow by searching the trends and top traffic pages with the CDC website in order to see what people
+      most seek when coming to their website.
+      <img src="img/CDC_Trends.png" width="100%">
+
+      <div class="row">
+        <div class="column">
+          <b15_400>Why users go to CDC website</b15_400>
+          <li>Fact Pages about Diseases (Lyme, Influenze, Strep Throat, Meningitis…)</li>
+          <li>BMI Index (Adult and Children)</li>
+          <li>STD Facts and Disease Facts</li>
+          <li>Disease Fact Pages</li>
+          <li>Topical / Current Events</li>
+          <li>Natural Disasters / Emergency Preparedness</li>
+          <li>Prevention</li>
+          <li>Linked from Other Sites</li>
+        </div>
+        <div class="column">
+          <b15_400>Top Keywords that link back to CDC</b15_400>
+          <li>Chalmydia</li>
+          <li>Flu Symptoms</li>
+          <li>Strep Throat</li>
+          <li>Flu Symptoms</li>
+          <li>Calculating BMI</li>
+        </div>
+      </div>
+
+      <img src="img/CDC_Task.png" width="100%">
+      With given tasks to the users, we created a wireflow mapping the current user flow.
+    </div>
+
+    <div class="sectionTitle">HEURISTIC EVALUATION
+    </div>
+    <div class="sectionText">
+      The heuristic analysis showed the need for both internal informational architecture and UI. Restructuring the
+      information hierarchy and having a well-organized look will reduce a significant amount of confusion.
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="img/CDC_Analysis_MainPage.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/CDC_Analysis_AboutCDC.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/CDC_Analysis_AZIndex.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/CDC_Analysis_ADHD.png" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+      <br>
+      The color accessibility check was needed. Most color contrasts passed except certain shades, such as green.
+      Because of various information services and abundant information resources, smaller texts needed to contrast with
+      the
+      background so that the contents could be clear and easily read. Paying careful attention to the suitable use of
+      negative space can support the visual hierarchy.
+      <img src="img/CDC_ColorContrastAccessibilityHeuristics.png" width="100%">
+
+      With the evaluation, we listed the important features and categorized them in a prioritization matrix.
+      <img src="img/CDC_UserTesting_Matrix.png" width="100%">
+    </div>
+
+    <div class="sectionTitle">STRUCTURING
+    </div>
+    <div class="sectionText">
+      <img src="img/CDC_SiteMap.png" width="100%">
+      Consistency, clarity, and unity were the main concerns when building the style guide. All the elements specified
+      in the Style Tile must easily guide the user to what they’re searching for.
       <img id="caseShadow" src="img/CDC_StyleGuide.png" width="100%">
-      <img src="img/CDC_prototype.png" width="100%">
+    </div>
+
+    <div class="sectionTitle">COMPILING FINDINGS INTO DESIGN
+    </div>
+    <div class="sectionText">
+      <img id="caseShadow" src="img/CDC_prototype.png" width="100%">
+      <img id="caseShadow" src="img/CDC_prototype.png" width="100%">
       <img src="img/CDC_feature.gif" width="100%">
+
+
     </div>
   </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+
 </body>
 
 
