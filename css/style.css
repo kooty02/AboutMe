@@ -80,7 +80,7 @@ hr.line {
 }
 
 hr.thinLine {
-  border: 1px solid #918888;
+  border: 0.8px solid #918888;
 }
 
 /* List Style */
