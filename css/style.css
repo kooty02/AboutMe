@@ -496,15 +496,6 @@ figure:hover {
   margin-bottom: 25px;
 }
 
-
-/*
-#caseBorder {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #b3b3b3;
-}
-*/
-
 #caseShadow {
   box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
 }
@@ -732,6 +723,10 @@ margin-right: auto;
   .sectionText img {
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+
+  #caseShadow {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
   }
 
   .projectCategory {
