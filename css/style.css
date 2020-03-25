@@ -25,10 +25,6 @@ h3 {
   font-weight: 500;
   margin: 0%;
 }
-h15 {
-font-size: 15px;
-font-weight: 500;
-}
 h4 {
   font-size: 13px;
   font-weight: 400;
@@ -109,15 +105,10 @@ margin: 15px 0;
 /* Background */
 .background {
   position: absolute;
-  width: 100%;
+  width: 200%;
   height: 300px;
   background-color: white;
-  margin: -8% -12%;
-}
-
-/* About Me */
-.aboutMe {
-position: relative;
+  margin: -8% -100%;
 }
 
 /* Navigation */
@@ -182,80 +173,6 @@ position: relative;
   width: 100%;
   transition: width .3s;
 }
-
-/*
-
-#categoryGrid {
-  position: relative;
-  z-index: 100;
-  margin: 0px 5%;
-  display: grid;
-  grid-column-gap: 25px;
-  grid-template-rows: 120px 240px 200px 200px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-  "empty role role"
-  "empty words1 words2"
-  "experience education skills"
-  "experience education skills";
-}
-
-#picture {
-  grid-area: picture;
-}
-#role {
-  grid-area: role;
-}
-#words1 {
-  grid-area: words1;
-  line-height: 24px;
-}
-#words2 {
-  grid-area: words2;
-  line-height: 24px;
-}
-#empty {
-  grid-area: empty;
-}
-#experience {
-  grid-area: experience;
-}
-#education {
-  grid-area: education;
-}
-#skills {
-  grid-area: skills;
-}
-#contact {
-  grid-area: contact;
-}
-
-.categoryGridArea {
-  background-repeat: no-repeat;
-  margin: 0px;
-  display: grid;
-  align-content: top;
-}
-
-.categoryGridArea2 {
-  margin: 80px 0px 0px 0px;
-  display: grid;
-  align-content: top;
-}
-
-.categoryGridArea3 {
-  margin: 0px 0px 0px -160px; 
-  display: grid;
-  align-content: end;
-}
-
-.categoryGridArea4 {
-  background-repeat: no-repeat;
-  margin: -90px 0px 0px 0px;
-  display: grid;
-  align-content: top;
-} 
-*/
 
 
 /* Portfolio Elements */
@@ -790,10 +707,13 @@ margin-right: auto;
   
   h4 {
     font-size: 12.5px;
-    font-weight: 400;
-    line-height: 18px;
+    line-height: 16px;
     letter-spacing: 0.6px;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 5px 0px;
+  }
+
+  .background {
+    height: 150px;
   }
 
   hr.line {
@@ -801,8 +721,12 @@ margin-right: auto;
     margin: 6% 15px;
   }
 
+  .sectionTitle {
+    margin-top: 30px;
+  }
+
   .sectionText {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 
   .sectionText img {
@@ -820,7 +744,8 @@ margin-right: auto;
   }
 
   .projectTitle {
-    font-size: 38px;
+    font-size: 36px;
+    line-height: 48px;
   }
   .projectTitleSmall {
     font-size: 28px;
@@ -887,6 +812,7 @@ margin-right: auto;
 #caseGrid {
   grid-template-rows: 80px 180px;
   grid-template-columns: 1fr;
+  grid-gap: 20px;
   grid-template-areas:
   "overview1"
   "overview2";
