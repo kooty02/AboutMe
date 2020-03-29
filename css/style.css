@@ -806,7 +806,7 @@ margin-right: auto;
 }
 
 #caseGrid {
-  grid-template-rows: 1100px 180px;
+  grid-template-rows: 100px 180px;
   grid-template-columns: 1fr;
   grid-gap: 20px;
   grid-template-areas:
