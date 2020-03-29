@@ -694,7 +694,7 @@ margin-right: auto;
   h3 {
     font-size: 15px;
     font-weight: 500;
-    margin: 0%;
+    margin: -3px 0px;;
   }
   
   h4 {
@@ -711,10 +711,6 @@ margin-right: auto;
   hr.line {
     border: 1px solid #14242C;
     margin: 6% 15px;
-  }
-
-  hr.thinLine {
-    margin: 0px 0px;
   }
 
   .sectionTitle {
@@ -810,7 +806,7 @@ margin-right: auto;
 }
 
 #caseGrid {
-  grid-template-rows: 80px 180px;
+  grid-template-rows: 1100px 180px;
   grid-template-columns: 1fr;
   grid-gap: 20px;
   grid-template-areas:
