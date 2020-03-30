@@ -737,6 +737,10 @@ margin-right: auto;
     margin: 0px 0px 5px 0px;
   }
 
+  .subHeading {
+    font-size: 15px;
+  }
+
   .background {
     margin: -6% -60px;
     border-top: 270px solid #FFFFFF;
