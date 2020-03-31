@@ -18,7 +18,6 @@ h1 {
   position: relative;
   z-index: 50;
   margin-bottom: 20px;
-  padding: 0px 15px;
   color: #F7513E;
 }
 h2 {
@@ -522,9 +521,20 @@ figure:hover {
 }
 
 .sectionText img {
+  display: block;
   margin-top: 20px;
   margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.imgCenter {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 #caseShadow {
   box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
